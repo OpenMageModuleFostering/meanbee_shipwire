@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package>
+    <name>Meanbee_Shipwire</name>
+    <version>0.3.3</version>
+    <stability>stable</stability>
+    <license uri="http://www.opensource.org/licenses/osl-3.0.php">Open Software License ("OSL") v. 3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Order submission and Inventory tracking with Shipwire</summary>
+    <description>Allows fulfilling of orders from within Magento, sending them to Shipwire with a click of a button and automatic Inventory tracking, ensuring that your Shipwire inventory level is always reflected on your Magento installation.</description>
+    <notes>* Fixed guest customer checkout name
+* Fixed admin URL issues</notes>
+    <authors><author><name>Nick</name><user>auto-converted</user><email>nick.jones@meanbee.com</email></author></authors>
+    <date>2009-04-10</date>
+    <time>09:52:17</time>
+    <contents><target name="magecommunity"><dir name="Meanbee"><dir name="Shipwire"><dir name="Block"><dir name="Sales"><dir name="Order"><file name="View.php" hash="6a5263a94d47434191d81bdbf9198889"/></dir></dir></dir><dir name="controllers"><file name="FulfillController.php" hash="57be77c06a0bd34dc7e2b0efee038f8e"/></dir><dir name="etc"><file name="config.xml" hash="129bdbaf5633cd57836826c14fa72a0c"/><file name="system.xml" hash="dc2c9ef98fa0cb7d4569c9b5630cfee0"/></dir><dir name="Helper"><file name="Data.php" hash="28101006db8607c625b764e9fe9fb9a2"/></dir><dir name="Model"><dir name="Api"><dir name="Ordersubmit"><file name="Shipping.php" hash="4ebff4acfdddcb057d88547dd5d64d7c"/></dir><file name="Abstract.php" hash="98ac31d8e865c1bf50148576e477d936"/><file name="Inventorysynch.php" hash="60cb3b50013616dee451db81602f6f73"/><file name="Ordersubmit.php" hash="cfad194c45d888391db48634d7325d30"/></dir><file name="Call.php" hash="f34d15405d2a45590e32d3785949ad71"/><file name="Environment.php" hash="0074bfa4d640010d92d876c6005bd4d3"/></dir><file name="LICENSE.txt" hash="471e43c2d8894b789ef60c2956c93c29"/><file name="Test.php" hash="68049f273edacaaa8dc882d239ea9cce"/></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Meanbee_Shipwire.xml" hash="2994ccc4e235fe2e3ec45c937a6be530"/></dir></target></contents>
+    <compatible/>
+    <dependencies/>
+</package>

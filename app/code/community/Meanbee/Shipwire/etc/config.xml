@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to support@meanbee.com so we can send you a copy immediately.
+ *
+ * @category   Meanbee
+ * @package    Meanbee_Shipwire
+ * @copyright  Copyright (c) 2008 Meanbee Internet Solutions (http://www.meanbee.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+	<modules>
+		<Meanbee_Shipwire>
+			<version>0.3.3</version>
+		</Meanbee_Shipwire>
+	</modules>
+	<global>
+		<models>
+			<shipwire>
+				<class>Meanbee_Shipwire_Model</class>
+			</shipwire>
+		</models>
+		<helpers>
+			<shipwire>
+				<class>Meanbee_Shipwire_Helper</class>
+			</shipwire>
+		</helpers>
+		<blocks>
+			<shipwire>
+				<class>Meanbee_Shipwire_Block</class>
+			</shipwire>
+			<adminhtml>
+				<rewrite>
+					<sales_order_view>Meanbee_Shipwire_Block_Sales_Order_View</sales_order_view>
+				</rewrite>
+			</adminhtml>
+		</blocks>
+
+		<resources>
+			<shipwire_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</shipwire_read>
+			<shipwire_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</shipwire_write>
+		</resources>
+
+		<default>
+			<shipwire>
+				<order_submission>
+					<default_shipping_method>twod</default_shipping_method>
+				</order_submission>
+			</shipwire>
+		</default>
+	</global>
+
+	<admin>
+		<routers>
+			<meanbee_shipwire>
+				<use>admin</use>
+				<args>
+					<module>Meanbee_Shipwire</module>
+					<frontName>shipwire</frontName>
+				</args>
+			</meanbee_shipwire>
+		 </routers>
+	</admin>
+
+	<adminhtml>
+		<acl>
+			<resources>
+				<admin>
+					<children>
+						<system>
+							<children>
+								<config>
+									<children>
+										<shipwire translate="title" module="shipwire">
+											<title>Shipwire Settings Section</title>
+										</shipwire>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+
+	<crontab>
+			<jobs>
+					<shipwire_inventorysynch>
+							<schedule><cron_expr>*/6 * * * *</cron_expr></schedule>
+							<run><model>shipwire/api_inventorysynch::cron</model></run>
+					</shipwire_inventorysynch>
+					<shipwire_callhome>
+							<schedule><cron_expr>30 5 * * *</cron_expr></schedule>
+							<run><model>shipwire/call::home</model></run>
+					</shipwire_callhome>
+			</jobs>
+	</crontab>
+</config>

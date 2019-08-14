@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Meanbee_Shipwire",
+    "type": "magento-module",
+    "license": "Open-Software-License-("OSL")-v.-3.0",
+    "homepage": "",
+    "description": "Order submission and Inventory tracking with Shipwire",
+    "authors": [
+    {
+        "name": "Nick",
+        "email": "nick.jones@meanbee.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

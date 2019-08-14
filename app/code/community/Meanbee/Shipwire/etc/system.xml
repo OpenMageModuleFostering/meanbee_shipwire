@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ *
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to support@meanbee.com so we can send you a copy immediately.
+ *
+ * @category   Meanbee
+ * @package    Meanbee_Shipwire
+ * @copyright  Copyright (c) 2008 Meanbee Internet Solutions (http://www.meanbee.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+	<sections>
+		<shipwire translate="label" module="shipwire">
+			<label>Shipwire Settings</label>
+			<tab>service</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>200</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<banner>
+					<label>Information</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<comment><![CDATA[<div style="text-align:center;"><a href="http://www.shipwire.com/pp/o.php?id=2411_1_bid_3_MAGENTO" target="_blank"><img src="http://www.shipwire.com/pp/image.php?bid=3&mid=2411" width="728" height="90" border="0"/></a><p>By signing up for a Shipwire.com account via the banner above you will help keep this module free.</p><p>To get periodical emails about the Shipwire module, consider signing up to our <a href="http://www.meanbee.com/newsletter" target="_blank">newsletter</a> (no spam, we promise), or follow us on <a href="http://twitter.com/meanbeeuk" target="_blank">twitter</a>.</p><p>If you require any support on this module please contact us at <a href="http://www.meanbee.com/contact" target="_blank">support@meanbee.com</a> and we'll try and set you straight - or <a href="http://getsatisfaction.com/meanbee/products/meanbee_shipwire_magento_module" target="_blank">get satisfaction</a>.</p></div>]]></comment>
+				</banner>
+				<auth translate="label" module="shipwire">
+					<label>Authentication and General Settings</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>20</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<email translate="label">
+							<label>Shipwire.com Email Address</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</email>
+						<password translate="label">
+							<label>Shipwire.com Password</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</password>
+						<environment translate="label">
+							<label>Environment</label>
+							<frontend_type>select</frontend_type>
+							<source_model>shipwire/environment</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</environment>
+					</fields>
+				</auth>
+				<services translate="label" module="shipwire">
+					<label>Service Settings</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>30</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<order_submission translate="label">
+							<label>Order Submission</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</order_submission>
+						<inventory_sync translate="label">
+							<label>Inventory Synchronisation</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>20</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</inventory_sync>
+						<tracking_updates translate="label">
+							<label>Tracking Updates</label>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<sort_order>30</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment><![CDATA[<b>Not</b> available in this version. Coming soon!]]></comment>
+						</tracking_updates>
+					</fields>
+				</services>
+				<order_submission>
+					<label>Order Submission Settings</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>40</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<default_shipping_method translate="label">
+							<label>Default Shipwire Shipping Method</label>
+							<frontend_type>select</frontend_type>
+							<source_model>shipwire/api_ordersubmit_shipping</source_model>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<comment>
+								This is the shipping method that will be sent to Shipwire to use with all
+								orders that are submitted through Magento.
+							</comment>
+						</default_shipping_method>
+					</fields>
+				</order_submission>
+			</groups>
+		</shipwire>
+	</sections>
+</config>
