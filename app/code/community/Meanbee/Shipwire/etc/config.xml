@@ -21,7 +21,7 @@
 <config>
 	<modules>
 		<Meanbee_Shipwire>
-			<version>0.3.3</version>
+			<version>0.3.4</version>
 		</Meanbee_Shipwire>
 	</modules>
 	<global>
@@ -101,6 +101,20 @@
 			</resources>
 		</acl>
 	</adminhtml>
+
+	<default>
+		<shipwire>
+			<auth>
+				<environment>test</environment>
+				<debug>0</debug>
+			</auth>
+			<services>
+				<order_submission>0</order_submission>
+				<inventory_synch>0</inventory_synch>
+				<tracking_updates>0</tracking_updates>
+			</services>
+		</shipwire>
+	</default>
 
 	<crontab>
 			<jobs>

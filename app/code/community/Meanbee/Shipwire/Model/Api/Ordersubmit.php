@@ -17,7 +17,11 @@
  * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  */
 
-define('DEBUG', 0);
+if(Mage::getStoreConfig('shipwire/auth/debug') == 1) {
+	define('DEBUG', 1);
+} else {
+	define('DEBUG', 0);
+}
 
 class Meanbee_Shipwire_Model_Api_Ordersubmit extends Meanbee_Shipwire_Model_Api_Abstract {
 	protected $_order; // Mage_Sales_Model_Order
